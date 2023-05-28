@@ -29,7 +29,7 @@ const App=()=>{
    {loading&&<h1 id="loading-text">loading……</h1>}
    <div className="image-grid"> 
    {
-   imageList.map((image)=>(<img src={image.url} alt={image.public_id} onload="document.getElementById('loading-text').style.display = 'none';"></img>
+   imageList.map((image)=>(<img src={image.url} alt={image.public_id}"></img>
    ))}
     </div>
     <div className="footer">

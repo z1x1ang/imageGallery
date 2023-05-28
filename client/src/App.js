@@ -4,6 +4,7 @@ import './App.css'
 const App=()=>{
   const [imageList,setImageList]=useState([]);
   const [nextCursor,setNextCursor]=useState(null);
+
   useEffect(()=>{
     const fetchData=async()=>{
       const responseJson=await getImages();
@@ -19,17 +20,17 @@ const App=()=>{
       ...responseJson.resources,
     ]);
     setNextCursor(responseJson.next_cursor)
+
   }
    return (
     <>
    <div className="image-grid"> 
    {
-   imageList.map((image)=>(<img src={image.url} alt={image.public_id}"></img>
+   imageList.map((image)=>(<img src={image.url} alt={image.public_id}></img>
    ))}
     </div>
     <div className="footer">
       {nextCursor && <button onClick={handleLoadMoreButtonClick}>Load More</button>}
-      {<a href="https://www.buymeacoffee.com/sixheart62T">Buy me a coffee</a>}
     </div>
     </>
 );

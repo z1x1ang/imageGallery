@@ -32,7 +32,7 @@ const App=()=>{
     </div>
     <div className="footer">
       {nextCursor&&<button onClick={handleLoadMoreButtonClick}>Load More</button>}
-      {!loading&&<a className="custom-link" href="https://www.buymeacoffee.com/sixheart62T">buy me a coffee</a>}
+      {!loading&&<a className="custom-link" href="https://www.buymeacoffee.com/sixheart62T">Support Me☕</a>}
     </div>
     </>
 );

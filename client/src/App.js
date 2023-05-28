@@ -15,19 +15,16 @@ const App=()=>{
     fetchData();
   },[]);
   const handleLoadMoreButtonClick=async()=>{
-    setLoading(true); 
     const responseJson=await getImages(nextCursor);
     setImageList((currentImageList)=>[
       ...currentImageList,
       ...responseJson.resources,
     ]);
     setNextCursor(responseJson.next_cursor);
-    setLoading(false); 
-
   }
    return (
     <>
-   {loading && <h1 id="loading-text">加载中...</h1>}
+   {loading && <h1 id="loading-text">load...</h1>}
    <div className="image-grid"> 
    {
    imageList.map((image)=>(<img src={image.url} alt={image.public_id}></img>

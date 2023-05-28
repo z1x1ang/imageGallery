@@ -29,6 +29,7 @@ const App=()=>{
     </div>
     <div className="footer">
       {nextCursor && <button onClick={handleLoadMoreButtonClick}>Load More</button>}
+      {<a href="https://www.buymeacoffee.com/sixheart62T">Buy me a coffee</a>}
     </div>
     </>
 );

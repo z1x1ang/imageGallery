@@ -24,6 +24,7 @@ const App=()=>{
   }
    return (
     <>
+   <div id ="loading-text">loading……</div>
    <div className="image-grid"> 
    {
    imageList.map((image)=>(<img src={image.url} alt={image.public_id}></img>

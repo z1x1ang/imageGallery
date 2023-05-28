@@ -24,9 +24,10 @@ code {
 	margin: 3rem 0 3rem 0;
 }
 .custom-link{
-        font-size: 20px;
-	border-radius: 10px;
-	border: none;
-	padding: 13px;
-	margin: 3rem 0 3rem 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none; 
+  color: #333;
 }

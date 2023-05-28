@@ -22,6 +22,7 @@ code {
 	border: none;
 	padding: 13px;
 	margin: 3rem 0.2rem;
+	cursor: pointer; 
 }
 .custom-link{
         font-size: 20px;

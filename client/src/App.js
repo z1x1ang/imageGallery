@@ -4,26 +4,30 @@ import './App.css'
 const App=()=>{
   const [imageList,setImageList]=useState([]);
   const [nextCursor,setNextCursor]=useState(null);
-
+  const [loading, setLoading] = useState(true);
   useEffect(()=>{
     const fetchData=async()=>{
       const responseJson=await getImages();
       setImageList(responseJson.resources);
       setNextCursor(responseJson.next_cursor);
+      setLoading(false);
     }
     fetchData();
   },[]);
   const handleLoadMoreButtonClick=async()=>{
+    setLoading(true); 
     const responseJson=await getImages(nextCursor);
     setImageList((currentImageList)=>[
       ...currentImageList,
       ...responseJson.resources,
     ]);
-    setNextCursor(responseJson.next_cursor)
+    setNextCursor(responseJson.next_cursor);
+    setLoading(true); 
 
   }
    return (
     <>
+   {loading && <h1 id="loading-text">加载中...</h1>}
    <div className="image-grid"> 
    {
    imageList.map((image)=>(<img src={image.url} alt={image.public_id}></img>

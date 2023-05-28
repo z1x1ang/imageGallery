@@ -22,7 +22,7 @@ const App=()=>{
       ...responseJson.resources,
     ]);
     setNextCursor(responseJson.next_cursor);
-    setLoading(true); 
+    setLoading(false); 
 
   }
    return (

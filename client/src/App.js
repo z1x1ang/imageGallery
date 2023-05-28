@@ -10,6 +10,7 @@ const App=()=>{
       const responseJson=await getImages();
       setImageList(responseJson.resources);
       setNextCursor(responseJson.next_cursor);
+      setLoading(false);
     }
     fetchData();
   },[]);
@@ -18,10 +19,8 @@ const App=()=>{
     setImageList((currentImageList)=>[
       ...currentImageList,
       ...responseJson.resources,
-      onLoad={() => setLoading(false)}
     ]);
     setNextCursor(responseJson.next_cursor)
-
   }
    return (
     <>

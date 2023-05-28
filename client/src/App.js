@@ -34,7 +34,7 @@ const App=()=>{
       {nextCursor&&<button onClick={handleLoadMoreButtonClick}>Load More</button>}
       {!loading&&<a className="custom-link" href="https://www.buymeacoffee.com/sixheart62T">Support Me☕</a>}
        {!loading&&<a className="custom-link" href="https://flowus.cn/680d1c09-acb0-4e67-9d89-c20d8b3f26b4">WeChat appreciated</a>}
-    </div>weixin
+    </div>
     </>
 );
 };
